@@ -4,19 +4,21 @@ import { useParams } from "react-router-dom";
 
 const MealDbDetails = () => {
     const { mealDbId } = useParams();
-    const [temas, setTeams] = useState({});
+    const [teams, setTeams] = useState({});
     useEffect(() => {
-        const url = `https://www.thesportsdb.com/api/v1/json/2/lookupequipment.php?id=${mealDbId}`
+        const url = `https://www.thesportsdb.com/api/v1/json/2/eventslast.php?id=${mealDbId}`
         fetch(url)
             .then(res => res.json())
-            .then(data => setTeams(data.equipment))
+            .then(data => setTeams(data.results[0]))
     }, [mealDbId])
-
 
     return (
         <div>
-            <h2>Meal Db Details : {mealDbId}</h2>
-            <h2>Teams : { } </h2>
+
+            <h3>Teams : {teams.strAwayTeam} </h3>
+            <h3>Teams : {teams.strCountry} </h3>
+            <h3>Teams : {teams.strEvent} </h3>
+            <h3>Teams : {teams.strSport} </h3>
 
         </div>
     );

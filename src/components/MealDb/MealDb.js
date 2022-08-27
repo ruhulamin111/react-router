@@ -14,7 +14,7 @@ const MealDb = () => {
 
             <h2>Meal Db : {leagues.length}</h2>
             {
-                leagues.map((league, index) => <Link
+                leagues.slice(0, 10).map((league, index) => <Link
                     to={`/mealDb/${league.idTeam}`}
                     key={index}
                 > {league.strTeam} </Link>)
