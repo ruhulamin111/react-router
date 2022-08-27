@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
-
     const navLinkStyles = ({ isActive }) => {
         return {
             textDecoration: isActive ? 'underline' : 'none',

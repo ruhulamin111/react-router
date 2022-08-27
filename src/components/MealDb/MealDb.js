@@ -11,15 +11,13 @@ const MealDb = () => {
 
     return (
         <div>
-
-            <h2>Meal Db : {leagues.length}</h2>
+            <h2>Meal with Sports League</h2>
             {
-                leagues.slice(0, 10).map((league, index) => <Link
+                leagues.slice(0, 30).map((league, index) => <Link
                     to={`/mealDb/${league.idTeam}`}
                     key={index}
-                > {league.strTeam} </Link>)
+                >Name : {league.strTeam} </Link>)
             }
-
             <Outlet></Outlet>
         </div>
     );

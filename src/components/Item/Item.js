@@ -18,7 +18,6 @@ const Item = () => {
             <h3>Area : {items.area}</h3>
             <h3>Region : {items.region}</h3>
             <h3>Population : {items.population}</h3>
-
         </div>
     );
 };

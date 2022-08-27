@@ -11,14 +11,13 @@ const Shop = () => {
 
     return (
         <div>
-            <h2>Shop of Country</h2>
+            <h2>Shop with Country</h2>
             {
                 countires.map((country, index) => <Product
                     key={index}
                     country={country}
                 ></Product>)
             }
-
         </div>
     );
 };

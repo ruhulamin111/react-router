@@ -1,10 +1,8 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 
-
 const Product = ({ country }) => {
     const { name: { common, official }, flags: { png } } = country;
-
     const navigate = useNavigate();
     const showDetails = () => {
         const path = `/product/${common}`

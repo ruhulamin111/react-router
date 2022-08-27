@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 
-
 const MealDbDetails = () => {
     const { mealDbId } = useParams();
     const [teams, setTeams] = useState({});
@@ -14,12 +13,10 @@ const MealDbDetails = () => {
 
     return (
         <div>
-
-            <h3>Teams : {teams.strAwayTeam} </h3>
-            <h3>Teams : {teams.strCountry} </h3>
-            <h3>Teams : {teams.strEvent} </h3>
-            <h3>Teams : {teams.strSport} </h3>
-
+            <h3>Name : {teams.strAwayTeam} </h3>
+            <h3>Country: {teams.strCountry} </h3>
+            <h3>Event : {teams.strEvent} </h3>
+            <h3>Sports : {teams.strSport} </h3>
         </div>
     );
 };
