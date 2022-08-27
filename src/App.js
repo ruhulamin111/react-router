@@ -5,10 +5,12 @@ import Shop from './components/Shop/Shop';
 import Product from './components/Product/Product';
 import About from './components/About/About';
 import NotFound from './components/NotFound/NotFound';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <div>
+      <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>} ></Route>
         <Route path='/home' element={<Home></Home>} ></Route>
